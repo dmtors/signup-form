@@ -1,0 +1,385 @@
+$white: #ffffff;
+$lightest-grey: #f4f8fd;
+$light-grey: #dce6ef;
+$grey: #919fab;
+$blue-grey: #b8c8d5;
+$mid-grey: #7f8a93;
+$dark-grey: #42484e;
+$blue: #117fff;
+$green: #3bcc9d;
+$red: #d95c27;
+
+body {
+    background-color: $lightest-grey;
+    font-family: "Helvetica", sans-serif;
+}
+
+div {
+    width: 18rem;
+}
+
+#nav {
+    width: 20rem;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+}
+
+#page {
+    width: 20rem;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 5px;
+}
+
+#footer {
+    width: 20rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+select, textarea, input, button {
+    outline: none;
+    outline-color: transparent;
+    appearance: none;
+}
+
+.input {
+    display: inline-block;
+    flex-flow: column-reverse;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    float: left;
+    label {
+        font-size: 1rem;
+        font-weight: 300;
+        transition: all .235s ease;
+    }
+    input {
+        font-size: 1rem;
+        font-weight: 300;
+        transition: all .235s ease;
+        width: 18rem;
+        padding: .5rem;
+        box-sizing: border-box;
+    }
+    button {
+        font-size: 1rem;
+        font-weight: 300;
+        transition: all .235s ease;
+        width: 18rem;
+        padding: .5rem;
+        box-sizing: border-box;
+    }
+    p, a {
+        transition: all .235s ease;
+    }
+}
+
+.float-topline.input {
+    label {
+        position: absolute;
+        transform: translate3d(0, -1.65rem, 0) scale(1);
+        transform-origin: left top;
+        color: $mid-grey;
+        background-color: none;
+        padding: 0 .5rem;
+        pointer-events: none;
+    }
+
+    input {
+        &:focus + label {
+            transform: translate3d(.3rem, -2.6rem, 0) scale(.65);
+            color: $blue;
+            background-color: $white;
+        }
+        &:focus:valid + label {
+            transform: translate3d(.3rem, -2.6rem, 0) scale(.65);
+            color: $blue;
+        }
+        &:focus:valid + label {
+            transform: translate3d(.3rem, -2.6rem, 0) scale(.65);
+            color: $blue;
+        }
+        &:valid + label {
+            transform: translate3d(.3rem, -2.6rem, 0) scale(.65);
+            color: $mid-grey;
+            background-color: $white;
+        }
+        &:focus:invalid + label {
+            color: $red;
+        }
+    }
+
+    .input-placeholder {
+        color: $mid-grey;
+        border-radius: 5px;
+        border: 1px solid $light-grey;
+        background: $white;
+        &:hover {
+            border-color: $grey;
+            cursor: text;
+        }
+        &:focus {
+            border-color: $blue;
+            background: $white;
+            color: $dark-grey;
+        }
+        &:valid {
+            color: $dark-grey;
+        }
+        &:focus::-webkit-input-placeholder {
+            color: $light-grey;
+        }
+        &:focus:invalid {
+            border-color: $red;
+        }
+    }
+
+    ::-webkit-input-placeholder {
+        opacity: 0;
+        transition: inherit;
+    }
+
+    input:focus::-webkit-input-placeholder {
+        opacity: 1;
+    }
+}
+
+.float-botline.input {
+    label {
+        position: absolute;
+        transform: translate3d(0, -1.65rem, 0) scale(1);
+        transform-origin: left top;
+        color: $mid-grey;
+        background-color: $white;
+        padding: 0 .5rem;
+        pointer-events: none;
+    }
+
+    input {
+        &:focus + label {
+            transform: translate3d(.25rem, -.4rem, 0) scale(.65);
+            color: $blue;
+        }
+        &:focus:valid + label {
+            transform: translate3d(.25rem, -.4rem, 0) scale(.65);
+            color: $blue;
+        }
+        &:valid + label {
+            transform: translate3d(.25rem, -.4rem, 0) scale(.65);
+            color: $mid-grey;
+        }
+        &:focus:invalid + label {
+            color: $red;
+        }
+    }
+
+    .input-placeholder {
+        color: $mid-grey;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid $light-grey;
+        background: $white;
+        &:hover {
+            border-color: $grey;
+            cursor: text;
+        }
+        &:focus {
+            border-color: $blue;
+            background: $white;
+            color: $dark-grey;
+        }
+        &:valid {
+            color: $dark-grey;
+        }
+        &:focus::-webkit-input-placeholder {
+            color: $light-grey;
+        }
+        &:focus:invalid {
+            border-color: $red;
+        }
+    }
+
+    ::-webkit-input-placeholder {
+        opacity: 0;
+        transition: inherit;
+    }
+
+    input:focus::-webkit-input-placeholder {
+        opacity: 1;
+    }
+}
+
+.float-invis.input {
+    label {
+        position: absolute;
+        transform: translate3d(0, -1.65rem, 0) scale(1);
+        transform-origin: left top;
+        color: $mid-grey;
+        background-color: $white;
+        padding: 0 .5rem;
+        pointer-events: none;
+    }
+
+    input {
+        &:focus + label {
+            transform: translate3d(.25rem, -2.45rem, 0) scale(.65);
+            color: $blue;
+        }
+        &:focus:valid + label {
+            transform: translate3d(.25rem, -2.45rem, 0) scale(.65);
+            color: $blue;
+        }
+        &:valid + label {
+            transform: translate3d(.25rem, -2.45rem, 0) scale(.65);
+            color: $mid-grey;
+        }
+        &:focus:invalid + label {
+            color: $red;
+        }
+    }
+
+    .input-placeholder {
+        color: $mid-grey;
+        border-radius: 5px;
+        border: none;
+        background: $white;
+        &:hover {
+            box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+            cursor: text;
+        }
+        &:focus {
+            box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.35);
+            color: $dark-grey;
+        }
+        &:valid {
+            color: $dark-grey;
+        }
+        &:focus::-webkit-input-placeholder {
+            color: $light-grey;
+        }
+    }
+
+    ::-webkit-input-placeholder {
+        opacity: 0;
+        transition: inherit;
+    }
+
+    input:focus::-webkit-input-placeholder {
+        opacity: 1;
+    }
+}
+
+.btn-fill.input {
+    button {
+        border-radius: 5px;
+        border: 1px solid darken($green, 10%);
+        background-color: $green;
+        color: $white;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($green, 5%);
+            border-color: darken($green, 15%);
+        }
+        &:active {
+            background-color: darken($green, 10%);
+            border-color: darken($green, 20%);
+        }
+    }
+}
+
+.select-style.input {
+    width: 20rem;
+    margin: 1rem auto 0;
+    button {
+        width: 5.8rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: .25rem 0;
+        font-size: 9px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        border: none;
+        background-color: $blue;
+        color: $white;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($blue, 5%);
+        }
+        &:active {
+            background-color: darken($blue, 10%);
+        }
+    }
+}
+
+.link.input {
+    text-align: right;
+    margin-top: .25rem;
+    padding-bottom: .5rem;
+    p, a {
+        text-decoration: none;
+        font-size: .75rem;
+        color: $blue-grey;
+        cursor: pointer;
+        padding-bottom: 0;
+        border-bottom: 1px solid rgba(17,127,255,0);
+        display: inline-block;
+        position: relative;
+        &:hover {
+            color: $blue;
+            padding-bottom: .25rem;
+            border-bottom: 1px solid rgba(17,127,255,1);
+        }
+        &:active {
+            color: darken($blue, 10%);
+            border-color: darken($blue, 10%);
+        }
+    }
+    #signupL {
+        float: left;
+    }
+    #loginL {
+        float: left;
+    }
+}
+
+.error {
+    position: absolute;
+    text-align: right;
+    margin-top: -1.45rem;
+    margin-left: -1.35rem;
+    svg {
+        position: absolute;
+    }
+    .error-dot {
+        fill: $red;
+    }
+    .blink-dot {
+        fill: $red;
+        animation: blink 1s linear infinite;
+        transition: all .235s ease;
+    }
+    @keyframes blink {
+        0% {
+            transform: scale(1);
+            opacity: .35;
+        }
+        100% {
+            transform: scale(2.5);
+            opacity: 0;
+        }
+    }
+}
+
+.no-show {
+    display: none !important;
+}
+
+.text-left {
+    float: left;
+}
